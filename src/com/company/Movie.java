@@ -5,8 +5,7 @@ import java.util.function.ToIntFunction;
 
 public class Movie implements Product, Watch{
     protected String title;
-    protected MovieGenre genre;
-    protected String director;
+    protected MovieGenre genre;     protected String director;
     protected long ID;
     protected int price;
 

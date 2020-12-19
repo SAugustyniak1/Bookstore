@@ -69,4 +69,9 @@ public class Book implements Product{
             return -1;
         }
     }
+
+    public static void sth(){
+        //empty
+    }
+    
 }
