@@ -7,7 +7,11 @@ public class Book implements Product{
     protected long ID;
     protected int price;
 
-    public Book(String title, String author, long ID, int price) {
+    public Book(String title, String author, long ID, int price) throws Exception{
+
+        Exception e = new Exception();
+        if(ID < 0 ) throw e;
+
         this.title = title;
         this.author = author;
         this.ID = ID;
@@ -73,5 +77,5 @@ public class Book implements Product{
     public static void sth(){
         //empty
     }
-    
+
 }

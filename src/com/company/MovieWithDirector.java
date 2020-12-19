@@ -4,8 +4,8 @@ public class MovieWithDirector extends Movie{
 
     private String director;
 
-    public MovieWithDirector(String title, MovieGenre genre, int price, int id, String director) {
-        super(title, genre, price, id);
+    public MovieWithDirector(String title, MovieGenre genre, int price, int id, String director) throws Exception{
+        super(title, genre, id, price);
         this.director = director;
     }
 

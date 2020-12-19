@@ -10,13 +10,21 @@ public class Movie implements Product, Watch{
     protected int price;
 
 
-    public Movie(String title, MovieGenre genre, long ID, int price) {
+    public Movie(String title, MovieGenre genre, long ID, int price) throws Exception{
+        Exception e = new IllegalArgumentException("ID cant be negative");
+
+        if( ID < 0) throw e;
+
         this.title = title;
         this.genre = genre;
         this.ID = ID;
         this.price = price;
+
     }
-    public Movie(String title, MovieGenre genre, long ID, int price, String director) {
+    public Movie(String title, MovieGenre genre, long ID, int price, String director) throws Exception{
+        Exception e = new IllegalArgumentException();
+
+        if( ID < 0) throw e;
         this.title = title;
         this.genre = genre;
         this.ID = ID;
