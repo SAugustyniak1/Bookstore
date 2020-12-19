@@ -31,15 +31,15 @@ public class Main {
         // -------------------------------------------BOOKS-------------------------------------------------------
 
         try {
-            Book manTadeusz = new Book("Man Tadeusz", "Mickiewicz", 26, 421321);
+            Book manTadeusz = new Book("Man Tadeusz", "Mickiewicz", -26, 421321);
             Book booklotr = new Book("Lord of the rings", "Tolkien", 25, 13231);
             Book bookthis = new Book("This", "King", 25, 643321);
             Book javabegginers = new Book("Java for beginners", "Gaddis", 25, 32117);
             Book aliceInWonderland = new ChildrensBook("Alice in Wonderland", "Lewis Carroll", 20, 321313, "from 6 years");
 
             products.add(booklotr);
-        }catch (Exception e){
-            e.printStackTrace();
+        }catch (IncorrectProductIdException e){
+            System.out.println(e.getMessage());
         }
 
         // -------------------------------------------------------------------------------------------------------

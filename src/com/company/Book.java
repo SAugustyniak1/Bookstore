@@ -7,9 +7,9 @@ public class Book implements Product{
     protected long ID;
     protected int price;
 
-    public Book(String title, String author, long ID, int price) throws Exception{
+    public Book(String title, String author, long ID, int price) throws IncorrectProductIdException {
 
-        Exception e = new Exception();
+        IncorrectProductIdException e = new IncorrectProductIdException(ID, title);
         if(ID < 0 ) throw e;
 
         this.title = title;

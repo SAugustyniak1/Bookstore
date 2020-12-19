@@ -4,7 +4,7 @@ public class ChildrensBook extends Book{
 
     private String recommendedAgeInfo;
 
-    public ChildrensBook(String title, String author, int price, long ID,  String recommendedAgeInfo) throws Exception {
+    public ChildrensBook(String title, String author, int price, long ID,  String recommendedAgeInfo) throws IncorrectProductIdException {
         super(title, author, ID, price);
         this.recommendedAgeInfo = recommendedAgeInfo;
     }
